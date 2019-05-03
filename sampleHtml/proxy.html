@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>proxy</title>
+</head>
+<body>
+<script>
+var person={name: '张三'}
+let proxy=new Proxy(person,{
+
+    get:function(target, property) {
+        if (property in target) {
+            return target[property]
+        }
+        else {
+            throw new ReferenceError(`Properties ${this.property} doesn't exist`);
+
+        }
+
+    }
+})
+
+
+
+</script>
+</body>
+</html>
