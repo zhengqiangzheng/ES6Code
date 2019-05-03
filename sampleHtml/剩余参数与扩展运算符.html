@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>剩余参数与可扩展运算符</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    /*扩展运算符*/
+    const youngers=['george','john','thomas']
+    const odlers=['james','adrew','martin']
+    const members=youngers+odlers
+    const currentmembers=[...youngers,'mary',...odlers]
+    console.log(members);
+    console.log(typeof members);
+    console.log(currentmembers);
+    //复制数组
+    const copyofcurmembers=[...currentmembers]
+    console.log(copyofcurmembers);
+    /*剩余参数*/
+    function sum(...numbers) {
+        numbers.map(number=>console.log(number))
+        return numbers.reduce((pre,cur)=>pre+cur,0)
+    }
+
+    console.log(sum(1, 2, 3, 4, 5));
+    console.log(sum(1, 2, 3));
+    function coverCurrency(rate, ...amounts) {
+        return amounts.map(amount => amount * rate);
+    }
+
+    console.log(coverCurrency(0.9, 22, 33, 21, 321));
+
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组解构</title>
+</head>
+<body>
+
+</body>
+<script>
+    const numbers = ['first', 'second', 'third', 'fourth']
+    // const [one, two] = numbers
+    // console.log(one, two)
+    const [one,...others]=numbers
+    console.log(one,others)
+    let a = 20;
+    let b = 30;
+    [a, b] = [b, a];
+    console.log(a);
+    console.log(b);
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array.from() and of()</title>
+</head>
+<body>
+<ul>
+    <li>go to store</li>
+    <li>watch tv</li>
+    <li>go shopping</li>
+    <li>listen to music</li>
+
+</ul>
+
+
+</body>
+<script>
+    var numbers = [65, 44, 12, 4];
+    let selectors=document.querySelectorAll('li')
+    console.log(selectors);
+    const names=Array.from(selectors,todo=>todo.textContent)
+    console.log(names);
+
+    for (const any of selectors) {
+        console.log(any.textContent);
+    }
+    // 计算数组的总和
+    let sum=numbers.reduce((pre,cur)=> {
+        return pre + cur;
+
+    })
+    console.log(sum);
+    let a = new Array(1);
+    console.log(a);
+    let b=Array.of(1)
+    console.log(b);
+
+</script>
+</html>

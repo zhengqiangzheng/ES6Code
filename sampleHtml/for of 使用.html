@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for of</title>
+</head>
+<body>
+
+</body>
+<script>
+    const fruits=['apples','banana','orange','mango'];
+    // fruits.forEach((fruit,index)=>{
+    //     console.log(fruit);
+    //     console.log(index);
+    // })
+    // fruits.map((fruit,index)=>{
+    //
+    //     console.log(`${fruit}是第${index}个`)
+    // })
+    // for (let fruit of fruits) {
+    //     console.log(fruit);
+    // }
+    // for (let [fruit, index] of fruits.entries()) {
+    //     console.log(`${fruit}ranks ${index+1}in my favorite fruits`)
+    //
+    //
+    // }
+    function sum() {
+        let total = 0;
+        for (let num of arguments) {
+            total += num;
+        }
+        console.log(total);
+
+    }
+
+    sum(1, 2, 3, 4, 5);
+
+
+
+</script>
+</html>

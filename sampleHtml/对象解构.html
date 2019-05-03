@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象解构</title>
+</head>
+<body>
+
+</body>
+<script>
+    const Tom = {
+        name: 'tome jones',
+        age: 25,
+        family: {
+            mother: 'norah jones',
+            father: 'richard jones',
+            brother: 'howard jones'
+        }
+    }
+    const {name, age} = Tom
+    const {father: f, mother: m, brother: b} = Tom.family
+
+
+    console.log(name);
+</script>
+</html>

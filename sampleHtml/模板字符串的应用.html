@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrow</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    const Jelly = {
+        name: 'jelly',
+        date: '2017-05-07',
+        todos: [
+            {name: 'go to store', complete: false},
+            {name: 'watch movie', complete: false},
+            {name: 'Running', complete: true}
+        ]
+    }
+    const template =
+    `<ul>
+    ${Jelly.todos.map(todo =>
+        `<li>
+        ${todo.name}&nbsp&nbsp ${todo.complete?'√':'×'}
+        </li>`).join('')}
+    </ul>
+    `
+    document.body.innerHTML = template;
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+</head>
+<body>
+
+</body>
+<script>
+let p=new Promise((resolve, reject) => {
+    // resolve('lalalalalla') //resolve 立即返回
+    setTimeout(()=>{
+        reject(Error('here is an error'))
+    },2000)
+
+
+})
+    .then(data=>{
+        console.log(data);
+    })
+    .catch(err=>{
+       console.error(err)
+    })
+</script>
+</html>

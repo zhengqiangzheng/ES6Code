@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+
+</head>
+<body>
+<script>
+function User(name,email) {
+    this.name = name;
+    this.email = email;
+
+}
+User.prototype.info=function () {
+    console.log(`Hi,my name is ${this.name},my email is ${this.email}`)
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签模板字符串</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    const user = 'mary';
+    const topic = 'learn to use markdown';
+    const sentence = highlight`${user}has commented on your topic ${topic}`;
+    function highlight(strings,...values) {
+        console.log(strings[0]);
+        console.log(values);
+        return '你好';
+    }
+
+
+</script>
+</html>

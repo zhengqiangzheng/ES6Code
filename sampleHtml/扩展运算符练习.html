@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展运算符practise</title>
+    <style>
+        span:hover{
+            color: red;
+            transform: translateY(-20px) rotate(10deg) scale(2);
+            display: inline-block;
+            transition: transform 0.25s;
+        }
+    </style>
+</head>
+
+<body>
+<h2 class="heading">ZHENG QIANG</h2>
+</body>
+<script>
+    const heading=document.querySelector('.heading')
+    heading.innerHTML=wrapWithSpan(heading.textContent)
+    function wrapWithSpan(word) {
+        return [...word].map(letter=>`<span>${letter}</span>`).join('')
+
+
+    }
+</script>
+</html>

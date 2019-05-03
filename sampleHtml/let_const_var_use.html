@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 0; i < 10; i++) {   //使用var下面的settimeout只会打印i10,使用let会打印i0-i9
+        console.log(i);
+        setTimeout(function () {
+            console.log(`i${i}`);
+        },1000);
+    }
+</script>
+
+</body>
+</html>
