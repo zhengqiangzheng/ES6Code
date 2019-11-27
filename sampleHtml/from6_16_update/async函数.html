@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>async</title>
+</head>
+<body>
+<script>
+    async function foo() {
+        return new Promise(resolve => {
+            // setTimeout(function () {
+            //     resolve()
+            // }, 2000);
+            console.log("执行中");
+            setTimeout(resolve, 2000);
+
+        })
+    }
+    async function test() {
+        console.log("开始执行", new Date().toTimeString());
+        await foo();
+        console.log("结束执行", new Date().toDateString());
+    }
+
+    let promise = test();
+    console.log(promise);
+
+    async function asyncprint() {
+        let s = await Promise.resolve("promise");
+        console.log(s);
+        let never = await Promise.reject("失败了");
+        console.log(never);
+    }
+
+    asyncprint();
+
+</script>
+
+</body>
+</html>

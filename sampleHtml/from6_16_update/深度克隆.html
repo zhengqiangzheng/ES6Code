@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深度克隆</title>
+</head>
+<body>
+<script>
+    let str = "abcd";
+    let str2 = str;
+    str2 = "123";
+    console.log("str");
+    let obj = {username:'zs', age: 12}
+    let obj2 = obj;//浅拷贝会影响原来的数据
+    obj2.age = 13;
+    console.log(obj);
+
+</script>
+</body>
+</html>

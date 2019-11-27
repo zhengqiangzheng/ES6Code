@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>obj_extension.html</title>
+</head>
+<body>
+<script>
+    // Object.create()
+    var obj = {userName: 'damu', age: 30}
+    var obj1 = {};
+    obj1 = Object.create(obj, {
+        sex: { //sex为扩展属性
+            value: '男',
+            writable: true, //可修改
+            configurable: true //可删除,
+            , enumerable: true //可以遍历扩展属性
+        }
+
+    })
+    console.log(obj1);
+    console.log(obj1.userName);
+    obj1.age = 31;
+    console.log(obj1);
+    for (let obj1Element in obj1) {
+        console.log(obj1Element);
+    }
+    // Object.defineProperties()
+    var obj2 = {firstname: 'kobe', lastName: 'bryant'}
+    Object.defineProperties(obj2, {
+        fullName: {
+            get() {
+                return this.firstname + '-' + this.lastName;
+
+            },
+            set(data) {
+                console.log(data);
+                this.firstname = data.split('-')[0];
+                this.lastName = data.split('-')[1];  //这样来修改fullName
+
+            }
+        }
+    })
+    console.log(obj2);
+    obj2.fullName = 'tim-duncan'
+    console.log(obj2);
+
+    var obj3 = {
+        username: '张三',
+        nickname: '小三',
+        get fullName() {
+            return this.username + "-" + this.nickname;
+
+        },
+        set fullName(dataa) {
+            //同上
+        }
+
+    }
+    console.log(obj3);
+    console.log(obj3.fullName);
+
+</script>
+</body>
+</html>

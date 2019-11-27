@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>utctime</title>
+    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+var date =new Date("2019-08-05T11:35:10.61Z")
+console.log(date);
+
+// console.log(date.setHours(date.getHours() - 7));
+// console.log(moment(date.setHours(date.getHours() - 8)).format('LLLL'));
+
+    var x= new Date(date.getTime()-8* 60 * 60 * 1000)
+// console.log(moment(x).format('yyyyMMddHHmmss.SSS Z'));
+console.log(x.toJSON());
+
+console.log(x);
+
+
+</script>
+</html>

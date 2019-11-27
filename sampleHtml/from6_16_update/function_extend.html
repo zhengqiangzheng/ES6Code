@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_extend.html</title>
+</head>
+<body>
+<script>
+    var obj = {
+        userName: 'bob',
+        age: 30
+    }
+
+    function foo(data) {
+        console.log(this, data);
+
+    }//默认是windows
+    //apply 和call都会立即调用 ，bind不会立即调用
+    foo.apply(obj, [33]);
+    foo.call(obj, 3);
+    setTimeout(function () {
+        console.log(obj)
+    }.bind(obj, [30]), 1000);
+    // foo()
+</script>
+</body>
+</html>

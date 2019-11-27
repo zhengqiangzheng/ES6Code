@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象结构</title>
+</head>
+<body>
+<script>
+    let obj = {
+        userName: 'zs',
+        age: 22
+    }
+
+    function foo({userName, age} = obj) {
+        console.log(userName, age);
+
+    }
+
+    foo();
+    let arr = [1, 2, 3, 4, 5];
+    let [, , a, b, v] = arr
+    console.log(a, b, v);
+
+</script>
+
+</body>
+</html>
