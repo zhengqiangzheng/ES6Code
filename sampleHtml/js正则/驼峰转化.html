@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "first_  word-sample ";
+    var newstr=str.replace(/[-_\s]+(.)/ig,function ($0,$1) {
+        //$1表示第一个分组的内容
+        console.log($1);
+        return $1.toUpperCase();
+    })
+    console.log(newstr);
+
+</script>
+</body>
+</html>

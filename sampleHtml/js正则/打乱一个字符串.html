@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var str = "abcde";
+    var newstr=str.split("").sort(function (val1, val2) {
+        return Math.random() - 0.5;
+    }).join("")
+    console.log(newstr);
+</script>
+</body>
+</html>

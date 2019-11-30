@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "aasdafasqwzvqjodhqwiquiaoaufqoiwecadsqwaababzbzbbbbccbbbbbb";
+    var newstr = str.split('').sort().join('');
+    console.log(newstr);
+    var maxletter = '';
+    var maxtime = 0;
+    newstr = newstr.replace(/([a-z])\1+/ig, function ($0, $1) {
+        console.log($0.length);
+        if ($0.length > maxtime) {
+            maxletter = $1;
+            maxtime = $0.length;
+        }
+        
+    });
+    console.log(newstr);
+    console.log(maxletter, maxtime)
+</script>
+
+</body>
+</html>

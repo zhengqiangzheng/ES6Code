@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var reg = /(^\d{4})\D(\d{2})\D(\d{2})/ig
+    var reg = /\b(\d+)\b/g
+    var string = '2019.11.30';
+    console.log(string.match(reg));
+    // console.log(reg.exec(string));
+    // console.log(reg.lastIndex);
+    // console.log(reg.exec(string));
+    // console.log(reg.lastIndex);
+    var result
+    while (result=reg.exec(string)) {
+        console.log(result,reg.lastIndex)
+    }
+</script>
+</body>
+</html>

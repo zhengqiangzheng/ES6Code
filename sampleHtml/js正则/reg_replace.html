@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "三胖在干什么，马云逛淘宝，马化腾玩游戏";
+    var newstr =str.replace(/三胖|马云|马化腾/gi,function ($0) {
+        return '*'.repeat($0.length);
+    })
+    var str2 = '2+3=5';
+    console.log(str2.replace(/(=)/ig, "$&$`$&$'$&"));
+    //$& 匹配的是 =， $` 匹配的是 2+3，$' 匹配的是 5。
+//2+3=2+3=5=5
+    console.log(newstr);
+</script>
+</body>
+</html>

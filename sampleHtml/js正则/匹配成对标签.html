@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str ='<div>12334</div>'
+    var str1 ='<p>12334</p>'
+    var str2 ='<div>12334</p>'
+    var str3 ='<div>12334</div>'
+    var regex=/<([^>]+)>[\D\d]*<\/\1>/ig
+    console.log(regex.test(str));
+</script>
+</body>
+</html>
