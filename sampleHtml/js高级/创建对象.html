@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象</title>
+</head>
+<body>
+
+<script>
+    function Person(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        //如果返回的是基本数据类型则还是返回默认的。
+        //不是基本数型就原样返回
+       // return [name, age, sex];
+    }
+    Person.prototype.run=function(){
+        console.log(this.name+"run")
+    }
+    Person.prototype.say=function(){
+        console.log(this.name+"say")
+    }
+
+
+    let p = new Person("小强", 11, '男');
+    let p2 = new Person("小红", 11, '女');
+    console.log((p.run === p2.run));//true
+    console.log(p);
+    console.log((typeof p));
+
+</script>
+</body>
+</html>

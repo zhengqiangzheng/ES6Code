@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+
+</body>
+<script type="text/javascript">
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {
+        (function (i) {
+            var btn = btns[i];
+            btn.onclick = function () {
+                alert(`第${i + 1}个按钮`);
+            }
+        })(i);
+    }
+</script>
+</html>

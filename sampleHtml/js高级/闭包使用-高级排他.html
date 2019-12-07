@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级排他</title>
+    <style>
+        .current {
+            width: 100px;
+            height: 10px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<li class="current"></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
+</body>
+<script>
+    window.onload = function () {
+        let tags = document.getElementsByTagName('li');
+        var preindex = 0;
+        for (let i = 0; i < tags.length; i++) {
+            (function (i) {
+                let tag = tags[i];
+                tag.onmouseover = function () {
+                    tags[preindex].className = "";
+                    this.className = "current";
+                    preindex = i;
+                }
+            })(i);
+
+        }
+
+
+    }
+</script>
+</html>
