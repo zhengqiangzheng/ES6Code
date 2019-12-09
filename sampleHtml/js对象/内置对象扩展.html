@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象扩展</title>
+</head>
+<body>
+<script>
+    function MyArr() {}
+    MyArr.prototype = new Array();
+    MyArr.prototype.run = function () {
+        console.log('run')
+    };
+    let ma=new MyArr();
+    ma.push('123');
+    console.log(ma);
+    ma.run()
+
+
+</script>
+
+</body>
+</html>

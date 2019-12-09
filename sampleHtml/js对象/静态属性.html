@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态属性</title>
+</head>
+<body>
+<script>
+function Person(name, age, doFunc) {
+    this.name=name;
+    this.age=age;
+    this.dofunc=function () {
+        console.log(`${name} is ${age}`)
+    }
+    if (!Person.PersonCount) {
+        Person.PersonCount = 0;
+    }
+    Person.PersonCount++;
+}
+var p1 =new Person('xx','12',function () {
+    console.log(`${name} is ${age}`)
+})
+var p2 =new Person('xx','13',function () {
+    console.log(`${name} is ${age}`)
+})
+console.log(Person.PersonCount);
+</script>
+</body>
+</html>

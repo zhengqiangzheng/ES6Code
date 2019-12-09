@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问原型对象</title>
+</head>
+<body>
+<script>
+    function Person(name, age) {
+        this.name=name;
+        this.age = age;
+    }
+    Person.prototype.run=function () {
+        console.log('run');
+    }
+    //方式一
+    console.log(Person.prototype);
+    //方式2
+    var p = new Person('1231', 123);
+    console.log(p.__proto__);
+</script>
+
+</body>
+</html>

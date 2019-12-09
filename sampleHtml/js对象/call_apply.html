@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call and apply</title>
+</head>
+<body>
+<script>
+  function normalPerson(name, age) {
+      this.name=name;
+      this.age = age;
+      this.dosomething=function(p1,p2) {
+          console.log(p1,p2);
+      }
+  }
+
+  function thirf(job) {
+      //把normalPerson 的name 和age拿过来
+      normalPerson.call(this)
+      this.job = job;
+  }
+
+  let np = new normalPerson('zs', 15);
+  let tf = new thirf();
+  console.log(tf.name);
+  np.dosomething("11","22");
+  np.dosomething.call(tf,'小偷', 19);
+  np.dosomething.apply(tf,[11,"heheh1"]);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+//hasOwnProperty仅在对象自身查找,不会去原型对象 in 会去原型对象查找
+    Person.prototype.address = "shanghai";
+    var p1 = new Person("zs", 13);
+    console.log('address' in p1);
+    console.log(p1.hasOwnProperty('address'));
+
+
+</script>
+</body>
+</html>

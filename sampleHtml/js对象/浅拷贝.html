@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浅拷贝</title>
+</head>
+<body>
+<script>
+    //浅拷贝第一种方式
+    var obj ={
+        name:'zs', age: 19,
+        pet:['js','html']
+    }
+    var copyobj = {};
+    for (var k in obj) {
+        copyobj[k] = obj[k];
+    }
+    obj.name = "周杰伦";
+    console.log(obj);
+    console.log(copyobj);
+    //第二种方式
+    var copyobj2 = {};
+    obj.pet.push('c#')
+    Object.assign(copyobj2, obj);
+    console.log(copyobj);
+    console.log(copyobj2);
+    console.log(obj);
+    //这里的pet就没有实现深拷贝 复杂数据类型
+
+
+</script>
+</body>
+</html>
